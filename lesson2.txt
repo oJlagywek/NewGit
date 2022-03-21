@@ -1,0 +1,46 @@
+    //задание 1
+
+int[] array = {1, 2, 3, 4, 5}; 
+System.out.println(Arrays.toString(array));    // Метод преобразует массив в строку
+
+int[] array = {5, 10, 15, 4, 1};
+Arrays.sort(array);
+System.out.println(Arrays.toString(array));   // Этот метод сортирует массив
+
+int[] array = {5, 10, 15, 4, 1, 7, 23, 8, 11, 42};
+Arrays.sort(array, 2, 7);
+System.out.println(Arrays.toString(array));   // Можно отсортировать только часть массива, указав начальный и конечный индексы
+
+String[] array = {"one", "two", "three", "four"};
+Arrays.sort(array);
+System.out.println(Arrays.toString(array));    // Сортировка массива из строк
+ 
+int[] numbers1 = {1, 2, 3};
+int[] numbers2 = {1, 2, 3};       // Сравнение двух массивов (если равны true, если нет false)
+System.out.println(Arrays.equals(numbers1, numbers2));   
+ 
+int[] numbers1 = {1, 2, 3, 4, 5};                 // При копировании массивов они ссылаются друг на друга, при равенстве нет
+int[] numbers2 = Arrays.copyOf(numbers1, 5);      // Копирование массива
+System.out.println(Arrays.toString(numbers2));    // Метод возвращает копию массива
+
+int[] numbers1 = {1, 2, 3, 4, 5};
+int[] numbers2 = Arrays.copyOf(numbers1, numbers1.length);        // Копирование массива с помощью его длинны
+
+int[] numbers1 = {2, 4, 6, 8, 10, 12, 14, 16};
+int [] numbers2 = Arrays.copyOfRange(numbers1, 2, 5);       // Копирование куска массива
+System.out.println(Arrays.toString(numbers2));   
+
+     //задание 2
+    long lg  = 1111111_L;   // некорректный long с подчеркиванием перед символом
+    long lg  = _1111111L;   // некорректный long с подчеркиванием в начале
+    float fl = _3.99999F;   // некорректный float с подчеркиванием в начале
+    float pi2 = 3.99999_F;  // некорректный float с подчеркиванием перед символом
+    int i1 = _10;          // некорректный long с подчеркиванием в начале
+    int i2 = 10_;          // некорректный long с подчеркиванием в конце
+
+    long lg  = 11_1_1_111L;      // правильный long с множественным подчеркиванием
+    long lg  =  111______1111L;   // правильный long с большим подчеркиванием
+    float fl =  3.9999__9F;       // правильный float с большим подчеркиванием
+    float pi2 = 3.99_9_99F;       // правильный float с множественным подчеркиванием
+    int i1 = 1_0;                 // правильный int с множественным подчеркиванием
+    int i2 = 1_______0;          // правильный int с большим подчеркиванием
